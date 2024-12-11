@@ -1,5 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+// @ts-ignore
 import { init as suppress } from "log-suppress";
 
 import "./index.css";
