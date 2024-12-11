@@ -1,5 +1,4 @@
 import React, { FC, useState, useCallback, useEffect } from "react";
-
 import "./style.css";
 
 interface Props {
@@ -9,14 +8,18 @@ interface Props {
 
 export const Invites: FC<Props> = ({ invites, onAdd }) => {
   const [name, setName] = useState("");
+
   const handleChangeName = useCallback(
-    (event: any) => {
+    (event: React.ChangeEvent<HTMLInputElement>) => {
       setName(event.target.value);
     },
-    [setName]
+    []
   );
+
   const handleSubmit = useCallback(() => {
-    onAdd(name);
+    if (name.trim()) {
+      onAdd(name);
+    }
   }, [name, onAdd]);
 
   useEffect(() => {
@@ -31,15 +34,22 @@ export const Invites: FC<Props> = ({ invites, onAdd }) => {
           onChange={handleChangeName}
           type="text"
           value={name}
+          placeholder="Enter invite name"
         />
-        <button className="invites--form-submit" onClick={handleSubmit}>
+        <button
+          className="invites--form-submit"
+          onClick={handleSubmit}
+          disabled={!name.trim()}
+        >
           Invite
         </button>
       </div>
       <div className="invites--delimiter" />
       <ul className="invites--items">
-        {invites.map((name) => (
-          <li className="invites--item">{name}</li>
+        {invites.map((name, index) => (
+          <li key={index} className="invites--item">
+            {name}
+          </li>
         ))}
       </ul>
     </div>

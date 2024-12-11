@@ -8,3 +8,5 @@
 - при добавлении инвайта, поле ввода инвайта должно очищаться.
 
 Задача: исправить эти две ошибки, и возможно что-то ещё поправить, что не понравится в коде
+
+Решение: https://codesandbox.io/p/sandbox/testovoe-zadanie-forked-rrr73v?workspaceId=ws_H9rA1zRPyv95ese4YS7gsr
