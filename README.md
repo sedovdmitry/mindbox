@@ -1,6 +1,9 @@
 # Тестовое задание
 
-Дано сломанное приложение: https://codesandbox.io/p/sandbox/testovoe-zadanie-forked-jwmrk
+- Дано сломанное приложение: https://codesandbox.io/p/sandbox/testovoe-zadanie-forked-jwmrk
+- Мое исправленное приложение: https://codesandbox.io/p/sandbox/testovoe-zadanie-forked-rrr73v?workspaceId=ws_H9rA1zRPyv95ese4YS7gsr
+
+## Что и как делал
 
 В первую очередь нужно исправить два бага в `Root.tsx`, чтобы модалка начала открываться:
 
